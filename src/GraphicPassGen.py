@@ -22,7 +22,7 @@ window.title("PassGen")
 window.geometry("800x480")
 window.minsize(800, 480)
 window.maxsize(800, 480)
-window.iconbitmap("LD.ico")
+window.iconbitmap("../resources/LD.ico")
 window.config(background='#383838')
 
 # Créer la frame principale
@@ -31,7 +31,7 @@ frame = Frame(window, bg='#383838')
 # Création d'image
 width = 292
 height = 380
-image = PhotoImage(file="lock.png")
+image = PhotoImage(file="../resources/lock.png")
 canvas = Canvas(frame, width=width, height=height, bg='#383838', bd=0, highlightthickness=0)
 canvas.create_image(width/2, height/2, image=image)
 canvas.grid(row=0, column=0, sticky=W, padx=25)
