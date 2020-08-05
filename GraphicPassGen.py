@@ -22,7 +22,7 @@ window.title("Graphic Password Generator")
 window.geometry("516x184")
 window.minsize(516, 184)
 window.maxsize(516, 184)
-window.iconbitmap("../resources/lock.ico")
+window.iconbitmap("resources/lock.ico")
 window.config(background='#383838')
 
 # Créer la frame principale
@@ -31,7 +31,7 @@ frame = Frame(window, bg='#383838')
 # Création d'image
 width = 96
 height = 125
-image = PhotoImage(file="../resources/redlock.png")
+image = PhotoImage(file="resources/redlock.png")
 canvas = Canvas(frame, width=width, height=height, bg='#383838', bd=0, highlightthickness=0)
 canvas.create_image(width/2, height/2, image=image)
 canvas.grid(row=0, column=0, sticky=W, padx=10)
