@@ -18,11 +18,11 @@ def generate_password():
 
 # Créer une fenêtre
 window = Tk()
-window.title("PassGen")
-window.geometry("516x200")
-window.minsize(516, 200)
-window.maxsize(516, 200)
-window.iconbitmap("../resources/LD.ico")
+window.title("Graphic Password Generator")
+window.geometry("516x184")
+window.minsize(516, 184)
+window.maxsize(516, 184)
+window.iconbitmap("../resources/lock.ico")
 window.config(background='#383838')
 
 # Créer la frame principale
