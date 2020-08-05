@@ -19,9 +19,9 @@ def generate_password():
 # Créer une fenêtre
 window = Tk()
 window.title("PassGen")
-window.geometry("800x480")
-window.minsize(800, 480)
-window.maxsize(800, 480)
+window.geometry("516x200")
+window.minsize(516, 200)
+window.maxsize(516, 200)
 window.iconbitmap("../resources/LD.ico")
 window.config(background='#383838')
 
@@ -29,12 +29,12 @@ window.config(background='#383838')
 frame = Frame(window, bg='#383838')
 
 # Création d'image
-width = 292
-height = 380
-image = PhotoImage(file="../resources/lock.png")
+width = 96
+height = 125
+image = PhotoImage(file="../resources/redlock.png")
 canvas = Canvas(frame, width=width, height=height, bg='#383838', bd=0, highlightthickness=0)
 canvas.create_image(width/2, height/2, image=image)
-canvas.grid(row=0, column=0, sticky=W, padx=25)
+canvas.grid(row=0, column=0, sticky=W, padx=10)
 
 # Créer une sous-boîte
 right_frame = Frame(frame, bg ='#383838', borderwidth=5, relief=SOLID)
@@ -44,7 +44,7 @@ Label_title = Label(right_frame, text ="Mot de passe :", font=("Helvetica", 20),
 Label_title.pack()
 
 # Créer un champs/entrée
-password_entry = Entry(right_frame, font=("Helvetica", 15), bg='#383838', fg='white', width=0, relief=SOLID, selectbackground='black')
+password_entry = Entry(right_frame, font=("Helvetica", 15), bg='#383838', fg='white', width=35, relief=SOLID, selectbackground='black')
 password_entry.pack()
 
 # Créer un slider
