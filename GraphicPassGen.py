@@ -1,4 +1,4 @@
-from tkinter import *
+import tkinter as tk
 import secrets
 import string
 
@@ -8,58 +8,58 @@ def generate_password():
     password += secrets.choice(string.ascii_uppercase)
     password += secrets.choice(string.digits)
     password += secrets.choice(string.punctuation)
-    for i in range(Length_scale.get()-4):
+    for i in range(tk.Length_scale.get()-4):
         password += secrets.choice(stringSource)
     char_list = list(password)
     secrets.SystemRandom().shuffle(char_list)
     password = ''.join(char_list)
-    password_entry.delete(0, END)
+    password_entry.delete(0, tk.END)
     password_entry.insert(0, password)
 
 # Créer une fenêtre
-window = Tk()
-window.title("Graphic Password Generator")
-window.geometry("516x184")
-window.minsize(516, 184)
-window.maxsize(516, 184)
-window.iconbitmap("resources/lock.ico")
-window.config(background='#383838')
+tk.window = tk.Tk()
+tk.window.title("Graphic Password Generator")
+tk.window.geometry("516x184")
+tk.window.minsize(516, 184)
+tk.window.maxsize(516, 184)
+tk.window.iconbitmap("resources/lock.ico")
+tk.window.config(background='#383838')
 
 # Créer la frame principale
-frame = Frame(window, bg='#383838')
+tk.frame = tk.Frame(tk.window, bg='#383838')
 
 # Création d'image
-width = 96
-height = 125
-image = PhotoImage(file="resources/redlock.png")
-canvas = Canvas(frame, width=width, height=height, bg='#383838', bd=0, highlightthickness=0)
-canvas.create_image(width/2, height/2, image=image)
-canvas.grid(row=0, column=0, sticky=W, padx=10)
+tk.width = 96
+tk.height = 125
+tk.image = tk.PhotoImage(file="resources/redlock.png")
+tk.canvas = tk.Canvas(tk.frame, width=tk.width, height=tk.height, bg='#383838', bd=0, highlightthickness=0)
+tk.canvas.create_image(tk.width/2, tk.height/2, image=tk.image)
+tk.canvas.grid(row=0, column=0, sticky=tk.W, padx=10)
 
 # Créer une sous-boîte
-right_frame = Frame(frame, bg ='#383838', borderwidth=5, relief=SOLID)
+tk.right_frame = tk.Frame(tk.frame, bg ='#383838', borderwidth=5, relief=tk.SOLID)
 
 # Créer un titre
-Label_title = Label(right_frame, text ="Mot de passe :", font=("Helvetica", 20), bg='#383838', fg='white')
-Label_title.pack()
+tk.Label_title = tk.Label(tk.right_frame, text ="Mot de passe :", font=("Helvetica", 20), bg='#383838', fg='white')
+tk.Label_title.pack()
 
 # Créer un champs/entrée
-password_entry = Entry(right_frame, font=("Helvetica", 15), bg='#383838', fg='white', width=35, relief=SOLID, selectbackground='black')
+password_entry = tk.Entry(tk.right_frame, font=("Helvetica", 15), bg='#383838', fg='white', width=35, relief=tk.SOLID, selectbackground='black')
 password_entry.pack()
 
 # Créer un slider
-Length_scale = Scale(right_frame, orient=HORIZONTAL, from_=4, to=30, bg='#383838', fg='white', font=("Helvetica",10), cursor='sb_h_double_arrow', activebackground='#383838', borderwidth=0,troughcolor='#5e5e5e', sliderrelief=SOLID, label="Longueur du mot de passe :", highlightthickness=0)
-Length_scale.pack(fill=X)
+tk.Length_scale = tk.Scale(tk.right_frame, orient=tk.HORIZONTAL, from_=4, to=30, bg='#383838', fg='white', font=("Helvetica",10), cursor='sb_h_double_arrow', activebackground='#383838', borderwidth=0,troughcolor='#5e5e5e', sliderrelief=tk.SOLID, label="Longueur du mot de passe :", highlightthickness=0)
+tk.Length_scale.pack(fill=tk.X)
 
 # Créer un bouton
-Generate_password_button = Button(right_frame, text ="Générer", font=("Helvetica", 20), bg='#383838', fg='white', command=generate_password, cursor='hand2', relief=FLAT, activebackground='#5e5e5e')
-Generate_password_button.pack(fill=X)
+tk.Generate_password_button = tk.Button(tk.right_frame, text ="Générer", font=("Helvetica", 20), bg='#383838', fg='white', command=generate_password, cursor='hand2', relief=tk.FLAT, activebackground='#5e5e5e')
+tk.Generate_password_button.pack(fill=tk.X)
 
 # on place la sous boîte à droite de la frame principale
-right_frame.grid(row=0, column=1, sticky=W)
+tk.right_frame.grid(row=0, column=1, sticky=tk.W)
 
 # Afficher la frame
-frame.pack(expand=YES)
+tk.frame.pack(expand=tk.YES)
 
 # Afficher la fenêtre
-window.mainloop()
+tk.window.mainloop()
