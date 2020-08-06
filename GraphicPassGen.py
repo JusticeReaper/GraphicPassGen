@@ -48,7 +48,7 @@ password_entry = Entry(right_frame, font=("Helvetica", 15), bg='#383838', fg='wh
 password_entry.pack()
 
 # Créer un slider
-Length_scale = Scale(right_frame, orient=HORIZONTAL, from_=4, to=30, bg='#383838', fg='white', font=("Helvetica",10), cursor='hand2', activebackground='#383838', borderwidth=0,troughcolor='#5e5e5e', sliderrelief=SOLID, label="Longueur du mot de passe :", highlightthickness=0)
+Length_scale = Scale(right_frame, orient=HORIZONTAL, from_=4, to=30, bg='#383838', fg='white', font=("Helvetica",10), cursor='sb_h_double_arrow', activebackground='#383838', borderwidth=0,troughcolor='#5e5e5e', sliderrelief=SOLID, label="Longueur du mot de passe :", highlightthickness=0)
 Length_scale.pack(fill=X)
 
 # Créer un bouton
