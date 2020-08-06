@@ -18,11 +18,11 @@ git clone https://github.com/JusticeReaper/GraphicPassGen
 
 - **2.** Installez Python depuis le Store Windows
 
-- **3.** Décompressez GraphicPassGen (master.zip)
+- **3.** Décompressez `GraphicPassGen-master.zip`
 
 # Exécution
 
-Allez dans le répertoire GraphicPassGen et exécutez la commande :
+Allez dans le répertoire `GraphicPassGen-master` et exécutez la commande :
 ```bash
 python3 GraphicPassGen.py
 ```
