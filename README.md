@@ -4,14 +4,6 @@ Graphic Password Generator est comme son nom l'indique un générateur de mot de
 
 ![](images/preview.png)
 
-# Installation sur Linux
-
-**NOTE**: Python 3.6 ou ultérieur est requis.
-
-```bash
-git clone https://github.com/JusticeReaper/GraphicPassGen
-```
-
 # Installation sur Windows
 
 - **1.** Telechargez [Graphic Password Generator](https://github.com/JusticeReaper/GraphicPassGen/archive/master.zip)
